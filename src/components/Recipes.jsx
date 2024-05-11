@@ -4,10 +4,16 @@ import { useState } from "react";
 /** ************************************************************************* */
 /** ************************************************************************* */
 export default function Recipes(props) {
-  const { recipes, search, onHandleShowDetails, setRecipes, bookmarkedRecipes } = props;
-  
+  const {
+    recipes,
+    search,
+    onHandleShowDetails,
+    setRecipes,
+    bookmarkedRecipes,
+  } = props;
+
   !search && recipes.splice(0);
-  
+
   return (
     <div className="recipes">
       {!search ? (
@@ -50,13 +56,20 @@ function Results(props) {
       </ul>
       <div className="recipes-btns">
         {page > 1 && (
-          <Button style={{position: 'absolute', left: 0}} onClick={handlePrevPage}>
+          <Button
+            style={{ position: "absolute", left: 0 }}
+            onClick={handlePrevPage}
+          >
             <i class="fas fa-arrow-left"></i>
             <span>Page {page - 1}</span>
           </Button>
         )}
-        {page !== result && (
-          <Button type="submit" style={{position: 'absolute', right: 0}} onClick={handleNextPage}>
+        {page !== result && result > 0 && (
+          <Button
+            type="submit"
+            style={{ position: "absolute", right: 0 }}
+            onClick={handleNextPage}
+          >
             <span>Page {page + 1}</span>
             <i class="fas fa-arrow-right"></i>
           </Button>
