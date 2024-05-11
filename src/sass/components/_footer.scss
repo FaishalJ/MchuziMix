@@ -1,0 +1,18 @@
+@use '../abstract' as a;
+
+.footer {
+  color: #e0dedd;
+  padding: 3rem 0;
+  background: #5a534c;
+  text-align: center;
+
+  a {
+    &:link, &:visited {
+      color: #e0dedd;
+      text-decoration: none;
+    }
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+}

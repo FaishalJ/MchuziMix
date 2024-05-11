@@ -1,0 +1,68 @@
+@use '../abstract' as a;
+
+.bookmark {
+  position: absolute;
+  width: 30rem;
+  padding: 4rem 0 2rem 0;
+  background-color: var(--clr-light-1);
+  right: 0;
+  z-index: 10;
+
+  &-close {
+    position: absolute;
+    text-align: right;
+    display: block;
+    font-weight: 600;
+    margin: 0 0 2rem 0;
+    cursor: pointer;
+    right: 2rem;
+    top: .6rem;
+  }
+
+  &-text {
+    padding: 0 2rem;
+    font-size: 1.6rem;
+  }
+
+  &-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-el {
+    a {
+      padding: 1rem 3rem;
+      &:hover, &:active {
+        background: var(--clr-light-2);
+      }
+      
+      display: flex;
+      gap: 2rem;
+      text-decoration: none;
+
+      figure {
+        width: 5rem;
+        height: 5rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    h4 {
+      color: var(--clr-main);
+      font-size: 1.6rem;
+    }
+
+    p {
+      color: var(--clr-grey-2);
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+  }
+}

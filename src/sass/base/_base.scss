@@ -1,0 +1,60 @@
+@use '../abstract' as a;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media screen and (max-width: a.$bp-medium) {
+    font-size: 56.25%;
+  }
+  @media screen and (max-width: a.$bp-small) {
+    font-size: 50%;
+  }
+  @media screen and (max-width: 31.875em) {
+    font-size: 43.75%;
+  }
+}
+
+body {
+  font-family: var(--font-primary);
+  @include a.flex-d(center);
+  font-size: 1.6rem;
+  font-weight: 400;
+  min-height: 100vh;
+  color: var(--clr-grey-2);
+  background: var(--clr-background);
+  line-height: 1.5;
+}
+
+#root {
+  box-shadow: .3rem .3rem 2rem rgba(10, 14, 17, 0.20);
+  height: 95vh;
+  width: 100rem;
+  border-radius: .5rem;
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+
+  @media screen and (max-width: a.$bp-large) {
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+.load {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  color: #fff;
+}

@@ -1,0 +1,76 @@
+@use '../abstract' as a;
+
+.nav {
+  background: var(--clr-light-1);
+  padding: 0 0 0 2rem;
+  @include a.flex-d(space-between);
+  margin-bottom: 1px;
+  @media screen and (max-width: a.$bp-mobile) {
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+  }
+  
+  &-logo {
+    font-family: var(--font-logo);
+    color: var(--clr-dark-1);
+    font-style: italic;
+    cursor: pointer;
+  }
+
+  &-form {
+    display: flex;
+    width: 40%;
+    box-shadow: 2px 2px 5px rgba(5, 12, 25, 0.30);
+    border-radius: 10rem;
+
+    @media screen and (max-width: a.$bp-mobile) {
+      order: 1;
+      width: 100%;
+      margin-right: 2rem;
+    }
+  
+    input {
+      width: 100%;
+      margin-right: -3rem;
+      border: none;
+      background: var(--clr-white);
+      padding: 1rem 2rem;
+      font-family: inherit;
+      font-size: inherit;
+      color: var(--clr-grey-2);
+      border-radius: 10rem;
+  
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &-results {
+    padding: 3rem 2rem;
+    &:hover {
+      background: var(--clr-light-2);
+    }
+  }
+  
+  &-bookmarks {
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    .fa-bookmark {
+      color: var(--clr-main);
+    }
+    &:hover {
+      background: var(--clr-light-2);
+    }
+  }
+
+}

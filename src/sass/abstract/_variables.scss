@@ -1,0 +1,29 @@
+:root {
+  --clr-background: linear-gradient(90deg, rgba(100,92,84,1) 46%, rgba(75,69,63,1) 71%);
+  --clr-background-light: #6f6a65;
+  --font-primary: "Rubik", sans-serif;
+  --font-logo: "McLaren", sans-serif;
+
+  --clr-main: #d68706;
+  --clr-main-1: #b96018;
+
+  --clr-white: #ffffff;
+  --clr-light-1: #e5e1dd;
+  --clr-light-2: #cecbc7;
+  
+  --clr-dark-grey: #4b453f;
+
+  --clr-black: #000;
+  --clr-dark-1: #333;
+  --clr-grey-2: #555555;
+  --clr-grey-3: #eeeeee;
+
+  --text-shadow: .2rem .2rem .4rem rgba(0, 0, 0, .2);
+}
+
+// BREAK POINTS
+$bp-large: 68.75em; //1000px
+$bp-medium: 56.25em; //900px
+$bp-small: 43.75em; //700px
+// $bp-mobile: 34.375em; //550px
+$bp-mobile: 37.5em; //550px
