@@ -11,7 +11,7 @@ export default function Recipes(props) {
     setRecipes,
     bookmarkedRecipes,
   } = props;
-
+  console.log(search);
   !search && recipes.splice(0);
 
   return (

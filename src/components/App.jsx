@@ -11,7 +11,7 @@ const timeout = function (s) {
     }, s * 1000);
   });
 };
-const tempId = "5ed6604591c37cdc054bc886";
+const tempId = "664c8f193e7aa067e94e8706";
 
 export default function App() {
   const [showBookmarks, setShowBookmarks] = useState(false);
@@ -83,14 +83,14 @@ export default function App() {
     e.preventDefault();
     setShowDetails(false);
     setShowBookmarks(false);
-    
+
     try {
       setErr(null);
       setLoad(true);
       const response = await Promise.race([
         timeout(5),
         fetch(
-          `https://forkify-api.herokuapp.com/api/v2/recipes?search=${search}`,
+          `https://forkify-api.herokuapp.com/api/v2/recipes?search=${search}`
         ),
       ]);
       if (!response.ok)
@@ -104,7 +104,6 @@ export default function App() {
       setResults(data.results);
       setRecipes(recipes);
       setErr(null);
-      
     } catch (error) {
       // console.error(error);
       setErr(error.message);
@@ -123,7 +122,7 @@ export default function App() {
         setErr(null);
         setLoad(true);
         const response = await fetch(
-          `https://forkify-api.herokuapp.com/api/v2/recipes/${recipeId}`,
+          `https://forkify-api.herokuapp.com/api/v2/recipes/${recipeId}`
         );
         if (!response.ok) throw new Error(`wrong id! (${response.status})`);
 
